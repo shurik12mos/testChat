@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="chat centred">
+			<div class="message-wrap" ng-repeat="message in chat.messages | orderBy: '-created'">
+				<div class="message">
+					<div class="message-username" ng-class="{right: message.my}">
+						{{message.user__username}} | {{message.created | date:'HH:mm dd-MM-yyyy'}}
+					</div>
+					<div class="message-text" ng-class="{right: message.my, 'bg-info': message.success, 'bg-warning': !message.success}">
+						<pre>{{message.text}}</pre>
+					</div>					
+				</div>
+			</div>            
+        </div>
+		<div class="create-message">
+			<form name="createMessage" ng-submit="message=''">
+                <div class="form-group">
+                    <textarea ng-model="message" 
+							  name="message" 
+							  type="text" 
+							  cols="4" 
+							  class="form-control" 
+							  placeholder="Message..."
+							  >
+					</textarea>
+                </div>
+                <button type="submit" class="btn btn-default btn-primary" ng-click="chat.create(message)">
+                    Submit
+                </button>
+            </form>
+		</div>
+    </div>
+</div>

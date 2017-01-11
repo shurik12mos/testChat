@@ -1,0 +1,25 @@
+{% load static %}
+{% load staticfiles %}
+<html ng-app="test">
+    <head>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/app.css"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-cookies.js"></script>
+    </head>
+    <body>        
+        <section class="container">
+            <ng-view></ng-view>
+        </section>
+    </body>
+    <script src="{% static 'app.js' %}"></script>
+    <script src="{% static 'auth/auth.js' %}"></script>
+	<script src="{% static 'auth/login.js' %}"></script>
+	<script src="{% static 'auth/register.js' %}"></script>
+	<script src="{% static 'chat/chat.js' %}"></script>
+	<script src="{% static 'chat/chatService.js' %}"></script>
+    
+</html>

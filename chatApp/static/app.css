@@ -1,0 +1,86 @@
+/*
+Основные для всего документа
+*/
+
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+textarea {
+    resize: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+pre {
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+	border: none;
+}
+
+/*
+	CHAT
+*/
+
+.chat {
+	height: 100vh;
+	padding-bottom: 103px;
+	overflow-y: auto;
+	overflow-x: hidden;	
+}
+
+.message-wrap {	
+	overflow: auto;
+}
+
+.message {
+	padding: 5px 15px;
+}
+
+.message-username {
+	font-size: 13px;
+	font-weight: bold;
+	color: #050592;
+}
+
+.message-text {
+	padding: 10px 10px;
+	margin-right: 50%;
+}
+
+.message-text pre{		
+	font-size: 15px;	
+	color: #777;
+	white-space: pre-wrap;	
+}
+
+
+
+.right {
+	margin-right: 0px;
+	margin-left: 50%;
+}
+
+.create-message {
+	position: absolute;
+	bottom: 0px;
+	left: -15px;
+	height: 103px;
+	width: 100%;
+	padding: 0px 30px;
+	margin: 0 15px;
+	overflow: hidden;
+	background-color: #fff;
+	z-index: 2;
+}
+
+
